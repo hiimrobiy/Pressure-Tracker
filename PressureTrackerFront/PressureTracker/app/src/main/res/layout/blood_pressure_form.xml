@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".NewInputActivity">
+
+        <TextView
+            android:id="@+id/tvNewEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="4dp"
+            android:text="New Entry"
+            android:textColor="@color/red"
+            android:textSize="36dp"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_guidLine_0.85"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputSystolic"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:maxWidth="350dp"
+            android:textColorHint="@color/primary_text"
+            app:boxStrokeColor="@color/black"
+            app:circularflow_radiusInDP="10"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guidLine_0.85"
+            app:layout_constraintStart_toStartOf="@id/vertical_guidLine_0.15"
+            app:layout_constraintTop_toBottomOf="@id/labelForSystolic">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputDiastolic"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:maxWidth="284dp"
+            android:textColorHint="@color/primary_text"
+            app:boxStrokeColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guidLine_0.85"
+            app:layout_constraintStart_toStartOf="@id/vertical_guidLine_0.15"
+            app:layout_constraintTop_toBottomOf="@id/labelForDiastolic">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputHeartRate"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:maxWidth="284dp"
+            android:textColorHint="@color/primary_text"
+            app:boxStrokeColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guidLine_0.85"
+            app:layout_constraintStart_toStartOf="@id/vertical_guidLine_0.15"
+            app:layout_constraintTop_toBottomOf="@id/labelForHeartView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guidLine_0.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guidLine_0.15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guidLine_0.85"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontal_guidLine_0.2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/horizontal_guidLine_0.1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <TextView
+            android:id="@+id/labelForSystolic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/systolic"
+            android:textColor="@color/red"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_0.1"
+            app:layout_constraintTop_toBottomOf="@id/tvNewEntry"
+           />
+
+        <TextView
+            android:id="@+id/labelForDiastolic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/diastolic"
+            android:textColor="@color/red"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_0.1"
+            app:layout_constraintTop_toBottomOf="@+id/inputSystolic" />
+
+        <TextView
+            android:id="@+id/labelForHeartView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/heartRate"
+            android:textColor="@color/red"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_0.1"
+            app:layout_constraintTop_toBottomOf="@+id/inputDiastolic" />
+
+        <ImageView
+            android:id="@+id/returnButton"
+            android:layout_width="77dp"
+            android:layout_height="39dp"
+            android:backgroundTint="@color/red"
+            app:layout_constraintBottom_toBottomOf="@+id/tvNewEntry"
+            app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_0.1"
+            app:layout_constraintTop_toTopOf="@+id/tvNewEntry"
+            app:srcCompat="@drawable/ic_frame_28" />
+
+        <TextView
+            android:id="@+id/tvAddDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add description"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnAddDescription"
+            app:layout_constraintStart_toEndOf="@+id/btnAddDescription"
+            app:layout_constraintTop_toTopOf="@+id/btnAddDescription" />
+
+        <ImageView
+            android:id="@+id/btnAddDescription"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_0.1"
+            app:layout_constraintTop_toBottomOf="@+id/inputHeartRate"
+            app:srcCompat="@drawable/ic_frame_21__1_" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="118dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="@color/red"
+            android:padding="10dp"
+            android:text="Save"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_guidLine_0.85"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddDescription" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inner_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/red"
+            android:backgroundTint="@color/red"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@id/saveButton"
+            tools:layout_editor_absoluteX="-26dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dropdown_menu_feelings"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="How are you feeling today?"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guidLine_0.75"
+                app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_inner_0.1"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvEating"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="What have you eaten today"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guidLine_0.75"
+                app:layout_constraintStart_toStartOf="@id/vertical_guidLine_inner_0.1"
+                app:layout_constraintTop_toBottomOf="@id/dropdown_menu_feelings">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_shape_for_description_inputs"
+                    android:backgroundTint="@color/white"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLines="3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/cbPain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/background_shape_for_description_inputs"
+                android:text="I am experiencing pain."
+                app:layout_constraintEnd_toStartOf="@id/vertical_guidLine_0.75"
+                app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_inner_0.1"
+                app:layout_constraintTop_toBottomOf="@+id/tvEating" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvPainDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Describe your pain"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guidLine_0.75"
+                app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_inner_0.1"
+                app:layout_constraintTop_toBottomOf="@id/cbPain">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_shape_for_description_inputs"
+                    android:backgroundTint="@color/white"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLines="3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/cbActivities"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/background_shape_for_description_inputs"
+                android:text="Add activity"
+                app:layout_constraintEnd_toStartOf="@+id/vertical_guidLine_0.75"
+                app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_inner_0.1"
+                app:layout_constraintTop_toBottomOf="@+id/tvPainDescription" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvActivityDescription"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Describe activity"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guidLine_0.75"
+                app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_inner_0.1"
+                app:layout_constraintTop_toBottomOf="@id/cbActivities">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_shape_for_description_inputs"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLines="3" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/background_shape_for_description_inputs"
+                android:text="Rate your stress level (0 = no stress)"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/vertical_guidLine_0.75"
+                app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_inner_0.1"
+                app:layout_constraintTop_toBottomOf="@+id/tvActivityDescription" />
+
+            <SeekBar
+                android:id="@+id/sbStressBar"
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/background_shape_for_description_inputs"
+                android:max="10"
+                android:progress="1"
+                app:layout_constraintEnd_toStartOf="@+id/vertical_guidLine_0.75"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_inner_0.1"
+                app:layout_constraintTop_toBottomOf="@+id/tvActivityDescription" />
+
+            <TextView
+                android:id="@+id/tvSeekBarProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/vertical_guidLine_0.75"
+                app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_inner_0.1"
+                app:layout_constraintTop_toBottomOf="@+id/sbStressBar" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontal_guidLine_0.05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guidLine_inner_0.1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_guidLine_0.75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.85" />
+
+            <Button
+                android:id="@+id/innerSaveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/border"
+                android:text="Save"
+                android:textColor="@color/red"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toStartOf="@+id/vertical_guidLine_0.75"
+                app:layout_constraintStart_toEndOf="@+id/tvSeekBarProgress"
+                app:layout_constraintTop_toBottomOf="@+id/tvSeekBarProgress"
+                />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Stress Level : "
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSeekBarProgress"
+                app:layout_constraintEnd_toStartOf="@+id/tvSeekBarProgress"
+                app:layout_constraintStart_toStartOf="@+id/vertical_guidLine_inner_0.1"
+                app:layout_constraintTop_toTopOf="@+id/tvSeekBarProgress" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

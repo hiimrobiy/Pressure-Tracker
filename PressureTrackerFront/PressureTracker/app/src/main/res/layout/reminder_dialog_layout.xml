@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvMedicineName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Medicine Name"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/tvMedicineTime"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etMedicineName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvMedicineName"
+        app:layout_constraintTop_toBottomOf="@id/tvMedicineName"
+        app:errorEnabled="true"
+        app:helperTextEnabled="true"
+
+        app:helperText="max. length = 10">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ToggleButton
+        android:id="@+id/tbMonday"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:text="Mon"
+        android:textOff="Mon"
+        android:textOn="Mon"
+        android:theme="@style/ToggleButton"
+        app:layout_constraintEnd_toStartOf="@+id/tbTuesday"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/etMedicineTime"
+        app:layout_constraintTop_toBottomOf="@+id/etMedicineTime" />
+
+
+    <TextView
+        android:id="@+id/tvMedicineTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Time"
+
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMedicineName" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etMedicineTime"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvMedicineTime"
+        app:layout_constraintTop_toBottomOf="@id/tvMedicineTime"
+        app:helperTextEnabled="true"
+        app:helperText="format hh:mm"
+        app:errorEnabled="true">>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ToggleButton
+        android:id="@+id/tbTuesday"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:text="Tue"
+        android:textOff="Tue"
+        android:textOn="Tue"
+        android:theme="@style/ToggleButton"
+        app:layout_constraintBottom_toBottomOf="@+id/tbMonday"
+        app:layout_constraintEnd_toStartOf="@+id/tbWednesday"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tbMonday"
+        app:layout_constraintTop_toTopOf="@+id/tbMonday" />
+
+
+    <ToggleButton
+        android:id="@+id/tbThursday"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="16dp"
+        android:text="Thu"
+        android:textOff="Thu"
+        android:textOn="Thu"
+        android:theme="@style/ToggleButton"
+        app:layout_constraintBottom_toBottomOf="@+id/tbWednesday"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tbWednesday"
+        app:layout_constraintTop_toTopOf="@+id/tbWednesday" />
+
+    <ToggleButton
+        android:id="@+id/tbWednesday"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:text="Wen"
+        android:textOff="Wen"
+        android:textOn="Wen"
+        android:theme="@style/ToggleButton"
+        app:layout_constraintBottom_toBottomOf="@+id/tbTuesday"
+        app:layout_constraintEnd_toStartOf="@+id/tbThursday"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tbTuesday"
+        app:layout_constraintTop_toTopOf="@+id/tbTuesday" />
+
+    <ToggleButton
+        android:id="@+id/tbFriday"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:text="Fri"
+        android:textOff="Fri"
+        android:textOn="Fri"
+        android:theme="@style/ToggleButton"
+        app:layout_constraintBottom_toBottomOf="@+id/tbSaturday"
+        app:layout_constraintEnd_toEndOf="@+id/tbMonday"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tbMonday"
+        app:layout_constraintTop_toTopOf="@+id/tbSaturday" />
+
+    <ToggleButton
+        android:id="@+id/tbSaturday"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:text="Sat"
+        android:textOff="Sat"
+        android:textOn="Sat"
+        android:theme="@style/ToggleButton"
+        app:layout_constraintEnd_toStartOf="@+id/tbWednesday"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tbFriday"
+        app:layout_constraintTop_toBottomOf="@+id/tbWednesday" />
+
+    <ToggleButton
+        android:id="@+id/tbSunday"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:text="Sun"
+        android:textOff="Sun"
+        android:textOn="Sun"
+        android:theme="@style/ToggleButton"
+        app:layout_constraintBottom_toBottomOf="@+id/tbSaturday"
+        app:layout_constraintEnd_toStartOf="@+id/tbThursday"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tbSaturday"
+        app:layout_constraintTop_toTopOf="@+id/tbSaturday" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

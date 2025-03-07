@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/miMedicineReminder"
+            android:icon="@drawable/ic_reminder_bell_svgrepo_com"
+            android:title="Reminders" />
+        <item
+            android:id="@+id/miHistory"
+            android:title="History"
+            android:icon="@drawable/ic_list_svgrepo_com"/>
+        <item
+            android:id="@+id/miLogOut"
+            android:title="LogOut"
+            android:icon="@drawable/ic_logout_svgrepo_com"
+            />
+    </group>
+
+</menu>
