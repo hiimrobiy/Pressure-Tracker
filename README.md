@@ -84,7 +84,7 @@
   </figure>
   
   <figure>
-    <img src="./images/user-data.png" alt="User Data Management">
+    <img src="./images/data.png" alt="User Data Management">
     <figcaption>User Data – Manage and review your historical health records.</figcaption>
   </figure>
   
