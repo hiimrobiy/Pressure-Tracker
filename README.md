@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pressure-Tracker</title>
+  
 </head>
 <body>
   <h1>Pressure-Tracker</h1>
